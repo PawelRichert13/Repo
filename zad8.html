@@ -10,18 +10,16 @@
                 {
                     var czas;
                     czas = (b-a)*86400
-                    document.write
-                    document.write
-                    
+                    document.write("<p style='color: green; font-size: 43px'>")
+                    document.write("Od " +a+ "do" +b+ "upłyneło: " +czas+ "sekund <br>");
                 }
-
-
-
-
-
-
-
-
-
-
-</head>
+                else
+                {
+                 document.write("podano błędne dane");
+                }
+            </script>
+            </head>
+                    <body>
+                        <imput type="button" onclick="dn_stycznia()" value="Liczymy" />
+                    </body>
+        </html>

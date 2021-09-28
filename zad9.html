@@ -3,22 +3,27 @@
     <head>
         <div style="color:green;font-size:43px;">
         <script language="JavaScript">
+            
             var D1_rich=promt("Pierwszy dzień stycznia=","");
             var D2_rich=promt("Drugi dzień stycznia=","");
             var G1_rich=promt("Pierwsza godzina =","");
             var G2_rich=prompt("Druga godzina =","");
+            
                 var a=praseFloat(D1_rich);
                 var b=praseFloat(D2_rich);
                 var c=praseFloat(G1_rich);
                 var d=praseFloat(G2_rich);
+            
                 if(1<=a&&b<=31&&a<b)
                 
                 {
-                    var godz1;
-                    godz1 = (c-d)*3600
-                    document.write("<p style='color: green; font-size: 43px'>")
-                    document.write()
-
+                    if (c>=1&&c<=24)
+                    {
+                         var godz1;
+                         godz1 = (c-d)*3600
+                         document.write("<p style='color: green; font-size: 43px'>")
+                         document.write()
+                    }
 
                     var godz2;
                     godz2 =

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		function liczenie() 
+		{
+			var liczba1=prompt("liczba a");
+			var liczba2=prompt("liczba b");
+			var l1=parseFloat(liczba1);
+			var l2=parseFloat(liczba2);
+			
+			var suma = l1 + l2;
+			var suma3 = Math.pow(suma, 3);
+			
+			var a3 = Math.pow(l1, 3);
+			var b3 = Math.pow(l2, 3);
+			var a2 = Math.pow(l1, 2);
+			var b2 = Math.pow(l2, 2);
+			var mnozenie1 = 3 * a3 * l2;
+			var mnozenie2 = 3 * l1 * b2;
+			
+			document.write("<p style='color: navy;font-size: 50px';>")
+			document.write(suma3+" = "+a3+ " + " +mnozenie1+ " + " +mnozenie2+ " + " +b3);
+		}
+		</script>
+	</head>
+	
+	<body>
+		<input type="button" onclick="liczenie()" value="Click"/>    
+	</body>
+</html>

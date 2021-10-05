@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script language="JavaScript">
+        function Pole_Richert(a_rich,b_rich)
+        {
+            a_dana_rich=paraseFloat(a_rich);
+            b_dana_rich=paraseFloat(b_rich);
+            Pole_Richert_wynik=a_rich*b_rich
+            document.getElementsByName('p')[0].value=Pole_Richert_wynik.toFixed(2);
+            alert("P="+Pole_Richert_wynik.toFixed(2)+" cm^2");
+            pokaz1.innerHtmL="P="+Pole_Richert_wynik.toFixed(2)+" cm^2"+"<br>";
+        }
+        function Obwod_Richert(a_rich,b_rich)
+        {
+            a_dana_rich=paraseFloat(a_rich);
+            b_dana_rich=paraseFloat(b_rich);
+            Obwod_Richert_wynik=2*(a_rich)+2*(b_rich)
+            document.getElementsByName('obwod')[0].value+Obwod_Richert_wynik.toFixed(2);
+            alert("Obw=" +Obwod_Richert_wynik.toFixed(2)+" cm");
+            pokaz2.innerHTML="Obw="+Obwod_Richert_wynik.toFixed(2)+" cm";
+        }
+        </script>
+    </head>
+    <body>
+        Obliczanie Pola i Obwodu prostokąta
+        <br>
+        <br>
+        <form name="formularz" action="..." onsubmit="Pole_Richert(this.bok_a.value,this.bok_b.value); 
+        Obwod_Richert(this.bok_a.value,this.bok_b.value);return false">  
+         Podaj a =
+        <input  size="6"  name="bok_a">
+         Podaj b=
+        <input  size="6"  name="bok_b">
+        <br>
+        <br>
+        <input  TYPE="submit"  Value="oblicz" >
+        <br>
+        <br>
+         P=
+        <input  size="6"  name="p">
+         Obw=
+        <input  size="6"  name="obwod">
+        </form>
+        <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+        </table>
+    
+        </body> 
+    </html>
+    </body>

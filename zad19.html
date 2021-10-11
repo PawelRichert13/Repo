@@ -1,49 +1,52 @@
-<html>
-    <head>
-        <script language="JavaScript">
-        function Pole_Richert(a_rich,b_rich)
-        {
-            a_dana_rich=paraseFloat(a_rich);
-            b_dana_rich=paraseFloat(b_rich);
-            Pole_Richert_wynik=a_rich*b_rich
-          
-           alert(Pole_Richert_wynik)
-        
-        }
-        function Obwod_Richert(a_rich,b_rich)
-        {
-            a_dana_rich=paraseFloat(a_rich);
-            b_dana_rich=paraseFloat(b_rich);
-            Obwod_Richert_wynik=2*(a_dana_rich)+2*(b_dana_rich)
-           
-            alert(Obwod_Richert_wynik);
-          
-        }
-        </script>
-    </head>
-    <body>
-        Obliczanie Pola i Obwodu prostokąta
-        <br>
-        <br>
-        <form name="formularz" action="..." onsubmit="Pole_Richert(this.bok_a.value,this.bok_b.value); 
-        Obwod_Richert(this.bok_a.value,this.bok_b.value);return false">  
-         Podaj a =
-        <input  size="6"  name="bok_a">
-         Podaj b=
-        <input  size="6"  name="bok_b">
-        <br>
-        <br>
-        <input  TYPE="submit"  Value="oblicz" >
-        <br>
-        <br>
-         P=
-        <input  size="6"  name="p">
-         Obw=
-        <input  size="6"  name="obwod">
-        </form>
-        <table>
-        <tr id="pokaz1"></tr>
-        <tr id="pokaz2"></tr>
-        </table>
-        </body> 
-    </html>
+<html> 
+	<head> 
+	<title>
+	  Obliczanie Pola i Obwodu prostokąta
+	</title>
+		<script language="JavaScript">
+			function Obw(a,b)
+			{
+				a_liczba=parseFloat(a)
+				b_liczba=parseFloat(b)
+				Obw_wynik=a_liczba+a_liczba+b_liczba+b_liczba
+				document.getElementsByName('obw')[0].value=Obw_wynik.toFixed(2); 
+				alert("obw="+Obw_wynik.toFixed(2)+" cm");                                              
+				pokaz1.innerHTML="obw="+Obw_wynik.toFixed(2)+" cm"+"<br>";   
+			 }
+			function P(a,b)
+			{
+				a_liczba=parseFloat(a)
+				b_liczba=parseFloat(b)
+				P_wynik=a_liczba*b_liczba
+				document.getElementsByName('pole')[0].value=P_wynik.toFixed(2);
+				alert("P="+P_wynik.toFixed(2)+" cm²");
+				pokaz2.innerHTML="P="+P_wynik.toFixed(2)+"cm²";
+			}
+		</script>
+	</head> 
+	
+	<body> 
+		 Obliczanie Pola i Obwodu prostokąta
+		<br> <br>
+		<form name="formularz" action="..." onsubmit="Obw(this.BokA.value,this.BokB.value); 
+		P(this.BokA.value,this.BokB.value);return false">  
+		 Podaj a=
+		<input  size="6"  name="BokA">
+		 Podaj b=
+		<input  size="6"  name="BokB">
+		<br>
+		<br>
+		<input  TYPE="submit"  Value="oblicz" >
+		<br>
+		<br>
+		 obw= 
+		<input  size="6"  name="obw"> 
+		 P= 
+		<input  size="6"  name="pole"> cm²
+		</form>
+		<table>
+		<tr id="pokaz1"></tr>
+		<tr id="pokaz2"></tr>
+		</table>
+	</body> 
+</html>

@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<script language="JavaScript">
+		
+			function Obw(odl_rich,l_rich)
+			{
+				dystans=parseFloat(odl_rich)
+				lot=parseFloat(l_rich)
+				wysokosc=Math.abs(Math.sqrt(Math.pow(lot, 2)-Math.pow(dystans, 2)))
+				document.getElementsByName('dop')[0].value=wysokosc.toFixed(2);
+																
+					
+			}
+			function Pc(odl_rich,l_rich)
+			{ 
+				dystans=parseFloat(odl_rich)
+				lot=parseFloat(l_rich)
+				wysokosc=Math.sqrt(Math.pow(lot,2)-Math.pow(dystans,2))
+				katstartu=((Math.atan2(dystans,wysokosc))/Math.PI)*180 
+				document.getElementsByName('kat')[0].value=katstartu.toFixed(2);
+				   
+			}
+		</script>
+	</head>
+
+	<body> 
+
+	<br> <br>
+	<form name="formularz" action="..." onsubmit="Obw(this.odleglosc.value,this.lot.value); 
+	Pc(this.odleglosc.value,this.lot.value);return false">  
+	Odległość od Artura do Dawida
+		<input  size="6"  name="odleglosc">
+	Podaj długosc lotu:
+		<input  size="6"  name="lot">
+	<br>
+	<br>
+		<input  TYPE="submit"  Value="oblicz" >
+	<br>
+	<br>
+	
+	
+	 Wysokość w pionie = 
+	<input  size="6"  name="dop">
+	 Kąt wylotu=
+	<input  size="6"  name="kat">
+	</form>
+	</body> 
+</html
+
+<!--Artur i Dawid stoją w odległości odl_kow ( taka zmienna do, której wczytujemy daną). 
+Artur jest na lotnisku z którego startuje samolot pod pewnym katem (kat_kow). 
+Samolot gdy znajduje się pionowo>  nad Dawidem  przebył drogę   s_kow 
+( taka zmienna do, której wczytujemy daną). 
+ Oblicz na jakiej wysokości h_kow oraz jaki był kąt startu samolotu.
+ Do obliczeń użyj definiowanych własnych dwuparametrowych funkcji --

@@ -1,0 +1,60 @@
+<html> 
+	<head> 
+		<title>
+			Obliczanie pola i obwodu trapezu
+		</title>
+		
+		<script language="JavaScript">
+			function Obw(a,b,h)
+			{
+				a_liczba=parseFloat(a)
+				b_liczba=parseFloat(b)
+				h_liczba=parseFloat(h)
+				pitagoras=Math.abs((b_liczba-a_liczba)/2)
+				c_liczba=Math.pow(pitagoras,2)+Math.pow(h_liczba,2)
+				Obw_wynik=Math.sqrt(c_liczba)+Math.sqrt(c_liczba) + a_liczba + b_liczba
+				document.getElementsByName('obwod')[0].value=Obw_wynik.toFixed(2);
+				alert("Obw= "+Obw_wynik.toFixed(2)+" cm");
+				pokaz1.innerHTML="Obw="+Obw_wynik.toFixed(2)+" cm"+"<br>"; 
+			 }
+			function Pc(a,b,h)
+			{
+				a_liczba=parseFloat(a)
+				b_liczba=parseFloat(b)
+				h_liczba=parseFloat(h)
+			   Pc_wynik=((b_liczba+a_liczba)*h_liczba)/2
+			   document.getElementsByName('pole')[0].value=Pc_wynik.toFixed(2);
+			   alert("Pc= "+Pc_wynik.toFixed(2)+" cm²");
+			   pokaz2.innerHTML="Pc="+Pc_wynik.toFixed(2)+"cm²";
+			}
+		</script>
+	</head> 
+	
+	<body> 
+		<h2>Obliczanie pola i obwodu trapezu</h2>
+		<br> <br>
+			<form name="formularz" action="..." onsubmit="Obw(this.bokA.value, this.BokB.value, this.wysokosc.value); 
+			Pc(this.bokA.value, this.BokB.value, this.wysokosc.value);return false">  
+				 Podaj bok a=
+					<input  size="6"  name="bokA">
+				 Podaj bok b=
+					<input  size="6"  name="BokB">
+				Podaj wysokosc=
+					<input size="6" name="wysokosc">
+				<br>
+				<br>
+					<input  TYPE="submit"  Value="oblicz" >
+				<br>
+				<br>
+				 Obw= 
+					<input  size="6"  name="obwod">
+				 Pc=
+					<input  size="6"  name="pole"> cm²
+			</form>
+		<table>
+			<tr id="pokaz1"></tr>
+			<tr id="pokaz2"></tr>
+		</table>
+
+	</body> 
+</html>

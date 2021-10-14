@@ -1,0 +1,41 @@
+<!-- Zapomniałem wrzucić na gita -->
+
+<html> 
+    <head> 
+        <script language="JavaScript">
+    function V(sciany,rzuty)
+    {
+        scianki=parseFloat(sciany);
+        rzut=parseFloat(rzuty)
+        var ilosc_rzutow
+
+        for (var i=0;i<=rzut;i++)
+        {
+        ilosc_rzutow= Math.floor(Math.random()*(scianki-1))+1;
+            document.write(ilosc_rzutow)
+            ilosc_rzutow =parseFloat(ilosc_rzutow);
+            if (ilosc_rzutow==sciany) {
+                document.write(":) ")
+
+            }
+        }   
+    }
+        </script>
+</head> 
+    <body> 
+
+    <br> <br>
+        <form name="formularz" action="..." onsubmit="V(this.scian.value,this.rzut.value);
+        return false">  
+            Liczba ścian
+            <input  size="6"  name="scian">
+            Liczba rzutów
+
+            <input  size="6"  name="rzut">
+            <br>
+            <br>
+            <input  TYPE="submit"  Value="oblicz" >
+
+        </form>
+    </body> 
+</html>

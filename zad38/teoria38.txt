@@ -1,0 +1,14 @@
+Obiekt location 
+
+Obiekt ten zawiera informacje o bieżącym adresie URL. Jego właściwości odpowiadają kolejnym członom adresu. 
+Ogólna postać lokalizatora URL to: protocol://host:port/path#fragment?query 
+Właściwości obiektu location 
+
+protocol to łańcuch znakowy określający protokół, zgodnie z którym 
+należy nawiązać łączność z podanym serwerem (np. http:, ftp:, file:),
+host  to łańcuch znakowy określający nazwę serwera z bieżącego adresu, 
+port to łańcuch znakowy odpowiadający portowi, 
+przez który należy połączyć się z serwerem, 
+pathname to łańcuch znakowy określający ścieżkę dostępu do dokumentu na serwerze, 
+hash  to łańcuch znakowy odpowiadający nazwie zakotwiczenia 
+(przypisanie tu jakiejś wartości spowoduje przewinięcie dokumentu do wskazanego punktu), serach to człon lokalizatora URL. 

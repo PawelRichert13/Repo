@@ -1,0 +1,14 @@
+Obiekt history
+1. Zawiera historię stron odwiedzanych w bieżącej sesji. 
+2. Posiada dwie właściwości:
+*current - zawiera bieżący lokalizator URL,
+*length - zawiera długość listy historii.
+
+window.history - wszystkie możliwości
+window.history.length - możesz sprawdzić ile stron odwiedził użytkownik zanim wszedł na 
+Twoją, ze względów bezpieczeństwa nie da się jednak pobrać ich adresów.
+window.history.forward() - Działa to jak przyciski "w przód" w przeglądarce.
+window.history.back() - Działa to jak przyciski "w tył" w przeglądarce.
+window.history.go(n) - pozwala przejść o kilka stron do przodu lub do tyłu naraz.
+window.history.go(-2); - przejdzie dwie strony wstecz
+window.history.go(0); - odświeży aktualną stronę

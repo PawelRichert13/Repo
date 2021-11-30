@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function Czolg(rok,nazwa,wojna,grubosc_pancerza,silnik,kraj)
+            {
+                this.rok=rok
+                this.nazwa=nazwa
+                this.dzialo=wojna
+                this.grubosc_pancerza = grubosc_pancerza
+                this.moc_silnika = silnik
+                this.kraj = silnik
+               this.masa    =kraj
+
+                this.show = function()
+            {
+                document.write(this.rok + this.nazwa + this.dzialo + this.grubosc_pancerza + this.moc_silnia + this.kraj +this.masa)
+            };
+            }
+            Renault_FT = new Czolg ("1917",  "Renault FT", "37mm", "6-22mm", "33km",
+             "Francja, "6500-6890Kg");
+            </br>
+            Tiger_IV = new Czolg("1942","Panzerkampfwagen VI Tiger","88mm","25-120mm",
+            "620-700KM","III Rzesza","56-57t");
+            </br>
+            Tiger_II = new Czolg("1944","Panzerkampfwagen VI B Tiger II","88mm","25-180mm","700KM"
+            ,"III Rzesza","")
+
+
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Renault_FT" onclick= "Renault_FT.show()">
+        <input type="button" value="Tiger_IV" onclick= "Tiger_IV.show()">
+    </body>
+</html>
